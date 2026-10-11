@@ -1,5 +1,7 @@
 # M0 最小工程骨架设计
 
+> 执行修订：以下保留初始化时的原始方案，不能作为最新实现事实。实际采用 Python 3.11.1；health/ready 已分离；前端使用 Vite 开发代理，未添加 CORS；Alembic/业务迁移未实现。最新契约见 `docs/DECISIONS.md` D-002～D-004、`docs/superpowers/specs/2026-10-11-m0-health-page-design.md`，实际进度以 `docs/LEARNING_STATE.md` 为准。
+
 ## 目标
 
 在一个 60–120 分钟的学习任务内建立 FlowInsight AI 的最小全栈运行基线，验证 React、FastAPI 与 PostgreSQL 的本地连接链路。该任务只解决工程启动和连通性问题，不进入数据源、Workflow、Agent 或 MCP 功能开发。

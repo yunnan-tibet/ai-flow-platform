@@ -1,0 +1,58 @@
+.appShell {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+.appHeader,
+.appFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 25px 40px;
+}
+
+.appHeader {
+  border-bottom: 1px solid var(--border);
+}
+
+.wordmark {
+  color: var(--text);
+  font-size: 21px;
+  font-weight: 650;
+  letter-spacing: -0.7px;
+  text-decoration: none;
+}
+
+.wordmark span {
+  color: var(--accent);
+  font-weight: 500;
+  margin-left: 3px;
+}
+
+.environmentLabel {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.appFooter {
+  border-top: 1px solid var(--border);
+  font-size: 11px;
+  color: var(--muted);
+}
+
+@media (max-width: 600px) {
+  .appHeader,
+  .appFooter {
+    padding: 20px;
+  }
+
+  .wordmark {
+    font-size: 18px;
+  }
+
+  .environmentLabel {
+    font-size: 11px;
+  }
+}

@@ -1,0 +1,17 @@
+[project]
+name = "flowinsight-backend"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "asyncpg>=0.32.0",
+    "fastapi",
+    "sqlalchemy[asyncio]>=2.1.4",
+    "uvicorn",
+]
+
+[dependency-groups]
+dev = [
+    "pytest",
+    "httpx2>=2.13.1",
+    "pip>=26.2.1",
+]

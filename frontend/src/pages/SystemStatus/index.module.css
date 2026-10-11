@@ -1,0 +1,146 @@
+.statusPage {
+  width: min(880px, calc(100% - 80px));
+  margin: 76px auto;
+  flex: 1;
+}
+
+.pageHeading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 46px;
+}
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: var(--muted);
+  margin: 0 0 12px;
+}
+.statusPage h1 {
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: -1.3px;
+  line-height: 1.3;
+  margin: 0 0 12px;
+}
+
+.pageDescription {
+  font-size: 14px;
+  color: var(--muted);
+  margin: 0;
+}
+
+.refreshButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  flex-shrink: 0;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  background: var(--accent);
+  color: white;
+  min-height: 42px;
+  padding: 10px 17px;
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  transition:
+    background 0.16s ease,
+    border-color 0.16s ease;
+}
+
+.refreshButton:hover:not(:disabled) {
+  background: #2049b1;
+  border-color: #2049b1;
+}
+
+.refreshButton:disabled {
+  cursor: wait;
+  background: #526fb5;
+  border-color: #526fb5;
+}
+
+.refreshIcon {
+  width: 17px;
+  height: 17px;
+}
+
+.spinning {
+  animation: spin 1.1s linear infinite;
+}
+
+.listHeading {
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted);
+  font-size: 12px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.statusList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.checkMeta {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 20px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.checkMeta time {
+  font-variant-numeric: tabular-nums;
+}
+
+.scopeNote {
+  margin: 32px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 600px) {
+  .statusPage {
+    width: calc(100% - 40px);
+    margin: 42px auto;
+  }
+
+  .pageHeading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 22px;
+    margin-bottom: 32px;
+  }
+  .statusPage h1 {
+    font-size: 30px;
+  }
+
+  .checkMeta {
+    flex-wrap: wrap;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spinning {
+    animation: none;
+  }
+
+  .refreshButton {
+    transition: none;
+  }
+}

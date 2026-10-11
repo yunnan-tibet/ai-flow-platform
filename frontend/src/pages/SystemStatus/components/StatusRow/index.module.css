@@ -1,0 +1,99 @@
+.statusRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 28px;
+  padding: 29px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.serviceName {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.serviceNumber {
+  font: 12px/1.8 var(--mono);
+  color: var(--muted);
+  margin-top: 1px;
+}
+
+.serviceName h2 {
+  margin: 0 0 9px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.serviceName code {
+  font: 12px/1.5 var(--mono);
+  color: var(--muted);
+}
+
+.serviceResult {
+  text-align: right;
+}
+
+.statusLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.statusDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.available {
+  color: #207747;
+}
+
+.unavailable {
+  color: #b13c32;
+}
+
+.unknown {
+  color: #697386;
+}
+
+.checking {
+  color: var(--accent);
+}
+
+.serviceResult p {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.7;
+  margin: 8px 0 0;
+  max-width: 310px;
+}
+
+.httpStatus {
+  display: inline-block;
+  color: var(--muted);
+  font: 11px/1.5 var(--mono);
+  margin-top: 5px;
+}
+
+@media (max-width: 600px) {
+  .statusRow {
+    flex-direction: column;
+    gap: 18px;
+    padding: 24px 0;
+  }
+
+  .serviceResult {
+    text-align: left;
+    padding-left: 34px;
+  }
+
+  .serviceName {
+    gap: 16px;
+  }
+}
